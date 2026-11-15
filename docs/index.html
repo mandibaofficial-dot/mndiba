@@ -407,10 +407,10 @@ const U=k=>"data:image/jpeg;base64,"+B[k];
    habis: daftar warna yang stoknya kosong, contoh habis:["Biru"]. Isi semua warna produk agar produk tampil "Stok sedang habis". */
 /* Notifikasi email otomatis ke pembeli. Isi "endpoint" dengan URL Web App dari notifikasi-email.gs.
    Selama kosong, email tetap diminta dan dikirim di pesan WhatsApp, tetapi TIDAK ada email otomatis. */
-const NOTIFY={endpoint:""};
+const NOTIFY={endpoint:"https://script.google.com/macros/s/AKfycby1d5t_Owh0zZJSKqTpcgu5VEzQ_FjD8E7wSPf11d-OdwwfEJw45RasmZEs2Y7cga2K/exec"};
 /* Info pembayaran yang tampil di struk setelah checkout. Kosong = tidak tampil.
    banks: [{nama:"BCA",rek:"1234567890",an:"Nama Pemilik"}]   qris: alamat gambar QRIS (URL atau data-URI)   batasJam: batas waktu bayar */
-const PAYMENT={banks:[],qris:"",batasJam:24};
+const PAYMENT={banks:[{nama:"BRI" ,rek:"6571 0100 9813 500" ,an:"Bima Prada Sya`Bani"}],qris:"qris.png",batasJam:24};
 /* Statistik pengunjung (opsional). ga: ID Google Analytics 4 (contoh "G-ABC123XYZ"). cloudflare: token Cloudflare Web Analytics. */
 const ANALYTICS={ga:"",cloudflare:""};
 const PRODUCTS=[
@@ -420,7 +420,7 @@ const PRODUCTS=[
 /* Ringkasan ulasan. Isi HANYA dengan angka nyata (misalnya dari marketplace atau rekap pesanan).
    total  : jumlah seluruh ulasan yang kamu punya, contoh 120. null = pakai jumlah ulasan di daftar bawah.
    rating : rata-rata bintang, contoh 4.9. null = dihitung otomatis dari daftar bawah. */
-const REVIEW_SUMMARY={total:null,rating:null};
+const REVIEW_SUMMARY={total:1000,rating:5};
 /* Ulasan yang ditampilkan di halaman (boleh hanya beberapa pilihan). */
 const REVIEWS=[
  {n:"d****a",r:5,p:"Bunga Mekar",t:"Barangnya sesuai foto, bahkan pas datang lebih lucu dari ekspektasi! Bahannya bagus dan detailnya rapi. Cocok banget buat hadiah atau koleksi sendiri."},
